@@ -97,6 +97,10 @@
     padding: 12rem;
     border-radius: 2rem;
 }
+.box:hover{
+    transform: rotate(3deg);
+   transition: all 1s ease-in-out;
+}
 .box img {
     width: 100%;
     height: auto;
