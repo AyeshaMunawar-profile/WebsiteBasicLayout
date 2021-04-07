@@ -24,6 +24,10 @@
 
 }
 
+.section{
+    padding: 15rem 5rem;
+}
+
 .zone:hover {
     -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
     -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
@@ -69,7 +73,7 @@
 }
 
 /*COVER*/
-.header-container {
+.section-header {
     color: white;
     font-size: 8rem;
     display: flex;
@@ -78,15 +82,13 @@
     align-items: center;
     height: 100vh;
 }
-.header-container .header-image{
+.section-header .header-image{
     width: 75rem;
     height: auto;
 
 }
 /*PROJECTS SECTION*/
-.section-project{
-    padding: 10rem 5rem;
-}
+
 .projects-wrapper {
     display: grid;
     gap: 2rem;
