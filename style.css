@@ -1,37 +1,27 @@
 :root {
     box-sizing: border-box;
+    font-family: lato, sans-serif;
+    font-size: 62.5%;
 }
 
 * {
     box-sizing: inherit;
-    margin: 0;
-    padding: 0;
+    font-family: inherit;
+    margin: 0px;
+    padding: 0px;
 }
 
 .zone {
-    padding: 30px 50px;
+    /*display: inline-block;*/
+    /*padding: 30px 20px;*/
     /*margin:40px 60px;*/
     cursor: pointer;
-    color: #FFF;
-    font-size: 2em;
-    border-radius: 4px;
-    border: 1px solid #bbb;
+    color: #fff;
+    font-size: 3rem;
+    /*border-radius: 4px;*/
+    /*border: 1px solid #bbb;*/
     transition: all 0.3s linear;
 
-}
-
-.container {
-    display: grid;
-    /*gap: 20px;*/
-    grid-template-columns: 1fr;
-    grid-template-rows: 10vh 90vh 100vh 300px;
-}
-
-.green {
-    grid-column: 1/-1;
-}
-
-.red {
 }
 
 .zone:hover {
@@ -41,59 +31,185 @@
     box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
 }
 
-.green {
-
+/*navigation*/
+.main-nav {
+    list-style: none;
+    font-size: 2.2rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    padding: 2rem 1rem;
 }
 
+.main-nav__item {
+    margin: 0 1rem;
+}
+
+.main-nav__item.main-nav__home {
+    margin-right: auto;
+}
+
+.main-nav__item .main-nav__item__link {
+    padding-bottom: 3px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.main-nav__item .main-nav__item__link:hover,
+.main-nav__item .main-nav__item__link:active {
+    border-bottom: 2px solid white;
+    transition: all 0.3s ease-in-out;
+}
+
+/*COVER*/
+.header-container {
+    color: white;
+    font-size: 8rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("img/undraw.png");
+    background-position: center;
+    background-size: cover;
+}
+
+/*PROJECTS SECTION*/
+.section-project{
+    padding: 10rem 5rem;
+}
+.projects-wrapper {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+.box{
+    background:linear-gradient(to bottom , rgba(64, 64, 64,1), rgba(24, 24, 24,1));
+    padding: 12rem;
+    border-radius: 2rem;
+}
+.box img {
+    width: 100%;
+    height: auto;
+}
+
+/*FOOTER*/
+.footer__wrapper{
+    font-size: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+.footer__wrapper .footer__category{
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+}
+.footer__category .footer__category__item .footer__category__item__link{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.footer__category__heading{
+    font-size: 4rem;
+}
+.footer__category__item__link:hover,
+.footer__category__item__link:active {
+    border-bottom: 2px solid white;
+    transition: all 0.5s ease-in-out;
+}
 /*https://paulund.co.uk/how-to-create-shiny-css-buttons*/
 /***********************************************************************
- *  Green Background
+ *  green background
  **********************************************************************/
 .green {
-    background: #56B870; /* Old browsers */
-    background: -moz-linear-gradient(top, #56B870 0%, #a5c956 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56B870), color-stop(100%, #a5c956)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #56B870 0%, #a5c956 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #56B870 0%, #a5c956 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #56B870 0%, #a5c956 100%); /* IE10+ */
-    background: linear-gradient(top, #56B870 0%, #a5c956 100%); /* W3C */
+    background: #56b870; /* old browsers */
+    background: -moz-linear-gradient(top, #56b870 0%, #a5c956 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #56b870), color-stop(100%, #a5c956)); /* chrome,safari4+ */
+    background: -webkit-linear-gradient(top, #56b870 0%, #a5c956 100%); /* chrome10+,safari5.1+ */
+    background: -o-linear-gradient(top, #56b870 0%, #a5c956 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(top, #56b870 0%, #a5c956 100%); /* ie10+ */
+    background: linear-gradient(top, #56b870 0%, #a5c956 100%); /* w3c */
 }
 
 /***********************************************************************
- *  Red Background
+ *  black background
+ **********************************************************************/
+.black{
+    background: #404040; /* old browsers */
+    background: -moz-linear-gradient(top, #5d5d5d 0%, #131313 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5d5d5d), color-stop(100%, #131313)); /* chrome,safari4+ */
+    background: -webkit-linear-gradient(top, #5d5d5d 0%, #131313 100%); /* chrome10+,safari5.1+ */
+    background: -o-linear-gradient(top, #5d5d5d 0%, #131313 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(top, #5d5d5d 0%, #131313 100%); /* ie10+ */
+    background: linear-gradient(top, #5d5d5d 0%, #131313 100%); /* w3c */
+}
+
+/***********************************************************************
+ *  red background
  **********************************************************************/
 .red {
-    background: #C655BE; /* Old browsers */
-    background: -moz-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #C655BE), color-stop(100%, #cf0404)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #C655BE 0%, #cf0404 100%); /* IE10+ */
-    background: linear-gradient(top, #C655BE 0%, #cf0404 100%); /* W3C */
+    background: #c655be; /* old browsers */
+    background: -moz-linear-gradient(top, #c655be 0%, #cf0404 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c655be), color-stop(100%, #cf0404)); /* chrome,safari4+ */
+    background: -webkit-linear-gradient(top, #c655be 0%, #cf0404 100%); /* chrome10+,safari5.1+ */
+    background: -o-linear-gradient(top, #c655be 0%, #cf0404 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(top, #c655be 0%, #cf0404 100%); /* ie10+ */
+    background: linear-gradient(top, #c655be 0%, #cf0404 100%); /* w3c */
 }
 
 /***********************************************************************
- *  Yellow Background
+ *  yellow background
  **********************************************************************/
 .yellow {
-    background: #F3AAAA; /* Old browsers */
-    background: -moz-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F3AAAA), color-stop(100%, #febf04)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* IE10+ */
-    background: linear-gradient(top, #F3AAAA 0%, #febf04 100%); /* W3C */
+    background: #f3aaaa; /* old browsers */
+    background: -moz-linear-gradient(top, #f3aaaa 0%, #febf04 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f3aaaa), color-stop(100%, #febf04)); /* chrome,safari4+ */
+    background: -webkit-linear-gradient(top, #f3aaaa 0%, #febf04 100%); /* chrome10+,safari5.1+ */
+    background: -o-linear-gradient(top, #f3aaaa 0%, #febf04 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(top, #f3aaaa 0%, #febf04 100%); /* ie10+ */
+    background: linear-gradient(top, #f3aaaa 0%, #febf04 100%); /* w3c */
 }
 
 /***********************************************************************
- *  Blue Background
+ *  blue background
  **********************************************************************/
 .blue {
-    background: #7abcff; /* Old browsers */
-    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7abcff), color-stop(44%, #60abf8), color-stop(100%, #4096ee)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* IE10+ */
-    background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* W3C */
+    background: #7abcff; /* old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* ff3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7abcff), color-stop(44%, #60abf8), color-stop(100%, #4096ee)); /* chrome,safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* chrome10+,safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* ie10+ */
+    background: linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* w3c */
+}
+
+/*MEDIA QUERIES*/
+@media only screen and (max-width: 992px) {
+    .main-nav {
+        font-size: 1.7rem;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .footer__wrapper .footer__category{
+        width: 60vw;
+        text-align: center;
+        margin: 5rem 0;
+        justify-self: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav {
+        font-size: 1.25rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+    }
+
 }
